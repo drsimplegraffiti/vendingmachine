@@ -1,4 +1,11 @@
-### Vending Machine
+### Vending Machine ERD
+
+![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/zoe50fasd89hvhjg7xy0.png)
+
+
+#### Description
+Postman Documentation: [https://documenter.getpostman.com/view/15544476/2s93Jxs2Mj](https://documenter.getpostman.com/view/15544476/2s93Jxs2Mj)
+
 
 - Roles: 
 User_Role: 
