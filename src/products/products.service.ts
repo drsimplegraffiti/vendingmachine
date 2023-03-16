@@ -29,7 +29,6 @@ export class ProductsService {
         HttpStatus.UNAUTHORIZED,
       );
     }
-    // check if the user is a seller
     if (product.adapter.role !== 'seller') {
       throw new HttpException(
         'You are unauthorized to perform this action 🙄',
@@ -137,7 +136,6 @@ export class ProductsService {
       );
     }
 
-    // Extract the amount from the object and convert it to a number
     amount = Number(amount);
     if (amount > product.amountAvailable) {
       throw new HttpException(
@@ -156,12 +154,8 @@ export class ProductsService {
 
     const change = user.balance - total;
 
-    // Calculate change in coins if needed
-    // const changeInCoins = this.calculateChange(change);
-
     user.balance = change;
 
-    // Add purchased item to user's purchasedItems array
     const purchasedItem = {
       id: product.id,
       productName: product.productName,
@@ -174,7 +168,6 @@ export class ProductsService {
 
     await this.userRepository.save(user);
 
-    // Update the amount of product available
     product.amountAvailable -= amount;
 
     await this.productRepository.save(product);

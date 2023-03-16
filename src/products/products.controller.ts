@@ -24,13 +24,11 @@ export class ProductsController {
     return this.productsService.getAllProducts();
   }
 
-  // get products by id
   @Get('single/:id')
   getProductById(@Param('id') id: number) {
     return this.productsService.getOneProduct(id);
   }
 
-  //createProduct if user role is seller
   @Post('create')
   @UseGuards(new AuthGuard())
   @UsePipes(new ValidationPipe())
@@ -38,7 +36,6 @@ export class ProductsController {
     return this.productsService.createProduct(user, body);
   }
 
-  //updateProduct if user role is seller
   @Put('update/:id')
   @UseGuards(new AuthGuard())
   @UsePipes(new ValidationPipe())
@@ -50,7 +47,6 @@ export class ProductsController {
     return this.productsService.updateProduct(user, id, body);
   }
 
-  //deleteProduct if user role is seller and the product belongs to the user
   @Delete('delete/:id')
   @UseGuards(new AuthGuard())
   @UsePipes(new ValidationPipe())
@@ -66,7 +62,6 @@ export class ProductsController {
     @Param('id') id: number,
     @Body('amount') amount: number,
   ) {
-    // const amount = 1; // Set default amount to 1
     return this.productsService.buyProduct(userId, id, amount);
   }
 }
