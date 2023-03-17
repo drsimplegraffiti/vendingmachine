@@ -19,24 +19,24 @@ import { AuthGuard } from '../shared/auth.guard';
 export class ProductsController {
   constructor(private readonly productsService: ProductsService) {}
 
-  @Get('all')
+  @Get('')
   getAllProducts() {
     return this.productsService.getAllProducts();
   }
 
-  @Get('single/:id')
+  @Get('/:id')
   getProductById(@Param('id') id: number) {
     return this.productsService.getOneProduct(id);
   }
 
-  @Post('create')
+  @Post('')
   @UseGuards(new AuthGuard())
   @UsePipes(new ValidationPipe())
   createProduct(@User('id') user, @Body() body: ProductDTO) {
     return this.productsService.createProduct(user, body);
   }
 
-  @Put('update/:id')
+  @Put('/:id')
   @UseGuards(new AuthGuard())
   @UsePipes(new ValidationPipe())
   updateProduct(
@@ -47,7 +47,7 @@ export class ProductsController {
     return this.productsService.updateProduct(user, id, body);
   }
 
-  @Delete('delete/:id')
+  @Delete('/:id')
   @UseGuards(new AuthGuard())
   @UsePipes(new ValidationPipe())
   deleteProduct(@User('id') user, @Param('id') id: number) {

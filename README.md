@@ -2,12 +2,17 @@
 
 ![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/zoe50fasd89hvhjg7xy0.png)
 
+---
 
 #### Description
 Postman Documentation: [https://documenter.getpostman.com/view/15544476/2s93Jxs2Mj](https://documenter.getpostman.com/view/15544476/2s93Jxs2Mj)
 
-### Deployed URL: [https://vedin.herokuapp.com/](https://vedin.herokuapp.com/)
+#### Deployed URL: [https://vedin.herokuapp.com/](https://vedin.herokuapp.com/)
 
+
+---
+
+#### Product Breakdown
 - Roles: 
 User_Role: 
   - Buyer can: buy (deposit) coins
@@ -54,7 +59,7 @@ Secured: for buyer and buyer can buy only if he has enough deposit. Using produc
 
 ---
 
-#### Generate resource with --no-spec
+<!-- #### Generate resource with --no-spec
 
 nest g resource products --no-spec
 nest g controller app --no-spec
@@ -64,4 +69,4 @@ yarn run test:watch
 ---
 
 ##### Query to get all users 
-SELECT * FROM user_entity;
+SELECT * FROM user_entity; -->
