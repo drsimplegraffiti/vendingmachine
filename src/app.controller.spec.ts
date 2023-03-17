@@ -18,7 +18,7 @@ describe('AppController', () => {
 
   describe('getHello', () => {
     it('should return a message with "Vendex"', () => {
-      const result = { message: 'Welcome to the Vendex 🍬🍬' };
+      const result = { message: 'Welcome to the Vendex 🍬🍬🍬' };
       jest.spyOn(appService, 'getHello').mockImplementation(() => result);
       expect(appController.getHello()).toBe(result);
     });
