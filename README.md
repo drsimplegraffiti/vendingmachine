@@ -56,6 +56,9 @@ Secured: for buyer and buyer can buy only if he has enough deposit. Using produc
 #### Generate resource with --no-spec
 
 nest g resource products --no-spec
+nest g controller app --no-spec
+nest g service app --no-spec
+yarn run test:watch
 
 ---
 

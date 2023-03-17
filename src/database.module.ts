@@ -17,7 +17,7 @@ import { join } from 'path';
         database: configService.get('POSTGRES_DB'),
         // url: configService.get('DATABASE_URL'),
         entities: [join(__dirname, '**', '*.entity.{ts,js}')],
-        synchronize: false, //should be false at production!
+        synchronize: true, //should be false at production!
         logging: true,
         autoLoadEntities: true,
       }),

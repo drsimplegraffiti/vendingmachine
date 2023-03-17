@@ -1,3 +1,5 @@
+import { AppService } from './app.service';
+import { AppController } from './app.controller';
 import { HttpErrorFilter } from './shared/http-error.filter';
 import { LoggingInterceptor } from './shared/logging.interceptor';
 import { DatabaseModule } from './database.module';
@@ -26,8 +28,9 @@ import { ProductsModule } from './products/products.module';
     UserModule,
     ProductsModule,
   ],
-  controllers: [],
+  controllers: [AppController],
   providers: [
+    AppService,
     {
       provide: APP_INTERCEPTOR,
       useClass: LoggingInterceptor,

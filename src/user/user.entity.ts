@@ -8,7 +8,7 @@ import {
 import * as bcrypt from 'bcryptjs';
 import * as jwt from 'jsonwebtoken';
 import { UserRO } from './user.dto';
-import { ProductEntity } from 'src/products/products.entity';
+import { ProductEntity } from '../products/products.entity';
 
 @Entity()
 export class UserEntity {

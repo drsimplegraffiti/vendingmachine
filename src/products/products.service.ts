@@ -2,7 +2,7 @@ import { ProductDTO, ProductRO } from './products.dto';
 import { InjectRepository } from '@nestjs/typeorm';
 import { ProductEntity } from './products.entity';
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
-import { UserEntity } from 'src/user/user.entity';
+import { UserEntity } from '../user/user.entity';
 import { Repository } from 'typeorm';
 
 @Injectable()

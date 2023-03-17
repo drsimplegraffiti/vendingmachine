@@ -8,7 +8,7 @@ import {
   ValidationPipe,
   UseGuards,
 } from '@nestjs/common';
-import { AuthGuard } from 'src/shared/auth.guard';
+import { AuthGuard } from '../shared/auth.guard';
 import { UserDTO } from './user.dto';
 import { UserService } from './user.service';
 
