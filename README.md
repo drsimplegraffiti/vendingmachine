@@ -6,6 +6,7 @@
 #### Description
 Postman Documentation: [https://documenter.getpostman.com/view/15544476/2s93Jxs2Mj](https://documenter.getpostman.com/view/15544476/2s93Jxs2Mj)
 
+### Deployed URL: [https://vedin.herokuapp.com/](https://vedin.herokuapp.com/)
 
 - Roles: 
 User_Role: 
